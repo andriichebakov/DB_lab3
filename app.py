@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import psycopg2
 import psycopg2.extras
 
+"""import os
+DATABASE_URL = os.environ.get("DATABASE_URL")"""
+
 app = Flask(__name__)
 app.secret_key = "dblab3"
 
@@ -9,7 +12,8 @@ DB_HOST = "localhost"
 DB_NAME = "db"
 DB_USER = "postgres"
 DB_PASS = "admin"
-
+# Для Heroku Postgres db connection
+#conn = psycopg2.connect(DATABASE_URL)
 conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
 
 
