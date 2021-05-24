@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import psycopg2
 import psycopg2.extras
-
+# Для Heroku Postgres db connection
 """import os
 DATABASE_URL = os.environ.get("DATABASE_URL")"""
 
